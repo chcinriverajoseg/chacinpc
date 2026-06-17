@@ -2,17 +2,17 @@ import { Cpu, HardDrive, Wind, ShieldCheck, LayoutTemplate, ShoppingCart, Smartp
 import './Services.css';
 
 const PC_SERVICES = [
-  { icon: Wind, title: 'Limpieza y mantención', desc: 'Limpieza interna, cambio de pasta térmica, optimización para bajar temperaturas y ruido.', price: 'Desde $10.000' },
+  { icon: Wind, title: 'Limpieza y mantención', desc: 'Limpieza interna, cambio de pasta térmica, optimización para bajar temperaturas y ruido.', price: 'Desde $20.000 - $35.000' },
   { icon: HardDrive, title: 'Upgrade de hardware', desc: 'Instalación de SSD, ampliación de RAM y recomendaciones según tu equipo y presupuesto.', price: 'Según equipo' },
-  { icon: Cpu, title: 'Diagnóstico y reparación', desc: 'Detección de fallas, formateo, reinstalación de Windows y configuración completa.', price: 'Desde $15.000' },
-  { icon: ShieldCheck, title: 'Optimización y seguridad', desc: 'Eliminación de virus, limpieza de inicio y ajustes para que tu PC rinda como nuevo.', price: 'Desde $8.000' },
+  { icon: Cpu, title: 'Diagnóstico y reparación', desc: 'Detección de fallas, formateo, reinstalación de Windows y configuración completa.', price: 'Desde $15.000 - $25.000' },
+  { icon: ShieldCheck, title: 'Optimización y seguridad', desc: 'Eliminación de virus, limpieza de inicio y ajustes para que tu PC rinda como nuevo.', price: 'Desde $20.000' },
 ];
 
 const WEB_SERVICES = [
-  { icon: LayoutTemplate, title: 'Landing page', desc: 'Página profesional para tu negocio o servicio. Diseño moderno, responsive y rápido.', price: 'Desde $80.000' },
-  { icon: ShoppingCart, title: 'Sitio para negocios', desc: 'Catálogo, menú digital o tienda con WhatsApp y redes integradas para vender más.', price: 'Desde $120.000' },
+  { icon: LayoutTemplate, title: 'Landing page', desc: 'Página profesional para tu negocio o servicio. Diseño moderno, responsive y rápido.', price: 'Desde $120.000 - $300.000' },
+  { icon: ShoppingCart, title: 'Sitio para negocios', desc: 'Catálogo, menú digital o tienda con WhatsApp y redes integradas para vender más.', price: 'Desde $260.000 - $500.000' },
   { icon: Smartphone, title: 'App web o móvil', desc: 'Aplicación completa con React o React Native, backend y base de datos a medida.', price: 'Cotizar' },
-  { icon: Gauge, title: 'Mejoras y mantención', desc: 'Optimización de velocidad, corrección de errores y actualizaciones de sitios existentes.', price: 'Desde $30.000' },
+  { icon: Gauge, title: 'Mejoras y mantención', desc: 'Optimización de velocidad, corrección de errores y actualizaciones de sitios existentes.', price: 'Desde $50.000' },
 ];
 
 function ServiceCard({ icon: Icon, title, desc, price }) {
