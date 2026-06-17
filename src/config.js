@@ -1,7 +1,7 @@
 export const CONTACT = {
   whatsappNumber: "56944019952",
   instagram: "https://instagram.com/chacinpc",
-  facebook: "https://facebook.com/chacinpc",
+  facebook: "https://www.facebook.com/share/18mCXmw3rr/",
   github: "https://github.com/chcinriverajoseg",
   linkedin: "https://www.linkedin.com/in/jose-chacin-946a4330b",
   portfolioUrl: "https://cine-joseito.vercel.app",
