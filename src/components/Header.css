@@ -1,0 +1,89 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s, border-color 0.3s;
+}
+.header--scrolled {
+  background: rgba(6, 17, 31, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+.header__brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.header__brand-name span { color: var(--accent); }
+.header__nav--desktop {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header__link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: color 0.15s;
+}
+.header__link:hover { color: var(--text); }
+.header__cta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 9px 18px;
+  border-radius: 6px;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.header__cta:hover {
+  background: var(--accent-glow);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+.header__toggle {
+  display: none;
+  background: transparent;
+  color: var(--text);
+  padding: 4px;
+}
+.header__nav--mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 28px 20px;
+  background: rgba(6, 17, 31, 0.97);
+  border-bottom: 1px solid var(--border);
+}
+.header__nav--mobile .header__link {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+}
+.header__nav--mobile .header__cta { margin-top: 12px; text-align: center; }
+@media (max-width: 768px) {
+  .header__nav--desktop { display: none; }
+  .header__toggle { display: flex; }
+}
