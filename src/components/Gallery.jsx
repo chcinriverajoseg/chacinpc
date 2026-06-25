@@ -40,7 +40,7 @@ export default function Gallery() {
         <div className="gallery__grid">
 
           {/* trabajo1 — col 1-2, fila 1-2 (el grande) */}
-          {ITEMS.slice(0, 1).map((item, i) => (
+          {ITEMS.slice(0, 2).map((item, i) => (
             <div
               key={i}
               className="gallery__item"
