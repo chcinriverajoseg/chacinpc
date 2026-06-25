@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 import './Gallery.css';
+// Agrega este import al inicio del archivo
+import BeforeAfter from './BeforeAfter';
 
 const ITEMS = [
   { type: 'img', src: '/trabajos/trabajo1.jpg', label: 'Desmontaje y diagnóstico' },
@@ -15,7 +17,9 @@ const ITEMS = [
   { type: 'img', src: '/trabajos/trabajo10.jpg', label: 'Conector de fan — reparación' },
   { type: 'img', src: '/trabajos/trabajo11.jpg', label: 'Reconexión de cables' },
   { type: 'img', src: '/trabajos/trabajo12.jpg', label: 'Laptop abierta — mantención' },
+
  
+
   { type: 'video', src: '/trabajos/video1.mp4', label: 'Proceso de reparación' },
   { type: 'video', src: '/trabajos/video2.mp4', label: 'Resultado final' },
 ];
@@ -38,6 +42,14 @@ export default function Gallery() {
         </p>
 
         <div className="gallery__grid">
+          {/* Tarjeta antes/después cargador MacBook */}
+<div className="gallery__item" style={{ gridColumn: 'span 2', aspectRatio: 'unset' }}>
+  <BeforeAfter
+    antes="/trabajos/macbook-cargador-antes.jpg"
+    despues="/trabajos/macbook-cargador-despues1.jpg"
+    label="Reparación cargador MacBook"
+  />
+</div>
           {ITEMS.map((item, i) => (
             <div
               key={i}
