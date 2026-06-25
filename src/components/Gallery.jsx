@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 import './Gallery.css';
-// Agrega este import al inicio del archivo
 import BeforeAfter from './BeforeAfter';
 
 const ITEMS = [
@@ -17,9 +16,6 @@ const ITEMS = [
   { type: 'img', src: '/trabajos/trabajo10.jpg', label: 'Conector de fan — reparación' },
   { type: 'img', src: '/trabajos/trabajo11.jpg', label: 'Reconexión de cables' },
   { type: 'img', src: '/trabajos/trabajo12.jpg', label: 'Laptop abierta — mantención' },
-
- 
-
   { type: 'video', src: '/trabajos/video1.mp4', label: 'Proceso de reparación' },
   { type: 'video', src: '/trabajos/video2.mp4', label: 'Resultado final' },
 ];
@@ -42,17 +38,36 @@ export default function Gallery() {
         </p>
 
         <div className="gallery__grid">
-          {/* Tarjeta antes/después cargador MacBook */}
-<div className="gallery__item" style={{ gridColumn: 'span 2', aspectRatio: 'unset' }}>
-  <BeforeAfter
-    antes="/trabajos/macbook-cargador-antes.jpg"
-    despues="/trabajos/macbook-cargador-despues1.jpg"
-    label="Reparación cargador MacBook"
-  />
-</div>
-          {ITEMS.map((item, i) => (
+
+          {/* trabajo1 — col 1-2, fila 1-2 (el grande) */}
+          {ITEMS.slice(0, 1).map((item, i) => (
             <div
               key={i}
+              className="gallery__item"
+              onClick={() => openLightbox(item)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && openLightbox(item)}
+              aria-label={item.label}
+            >
+              <img src={item.src} alt={item.label} className="gallery__media" loading="lazy" />
+              <div className="gallery__overlay"><ZoomIn size={22} /><span>{item.label}</span></div>
+            </div>
+          ))}
+
+          {/* BeforeAfter cargador MacBook — col 3-4 */}
+          <div className="gallery__item" style={{ gridColumn: 'span 2', aspectRatio: 'unset' }}>
+            <BeforeAfter
+              antes="/trabajos/macbook-cargador-antes.jpg"
+              despues="/trabajos/macbook-cargador-despues1.jpg"
+              label="Reparación cargador MacBook"
+            />
+          </div>
+
+          {/* Resto de items */}
+          {ITEMS.slice(1).map((item, i) => (
+            <div
+              key={i + 1}
               className="gallery__item"
               onClick={() => openLightbox(item)}
               role="button"
@@ -63,9 +78,7 @@ export default function Gallery() {
               {item.type === 'video' ? (
                 <video
                   src={item.src}
-                  muted
-                  loop
-                  playsInline
+                  muted loop playsInline
                   className="gallery__media"
                   onMouseEnter={e => e.target.play()}
                   onMouseLeave={e => { e.target.pause(); e.target.currentTime = 0; }}
@@ -73,13 +86,11 @@ export default function Gallery() {
               ) : (
                 <img src={item.src} alt={item.label} className="gallery__media" loading="lazy" />
               )}
-              <div className="gallery__overlay">
-                <ZoomIn size={22} />
-                <span>{item.label}</span>
-              </div>
+              <div className="gallery__overlay"><ZoomIn size={22} /><span>{item.label}</span></div>
               {item.type === 'video' && <span className="gallery__video-badge">▶ video</span>}
             </div>
           ))}
+
         </div>
       </div>
 
@@ -92,11 +103,7 @@ export default function Gallery() {
             {lightbox.type === 'video' ? (
               <video
                 src={lightbox.src}
-                muted
-                autoPlay
-                loop
-                playsInline
-                controls
+                muted autoPlay loop playsInline controls
                 className="lightbox__media"
               />
             ) : (
