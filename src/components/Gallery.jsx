@@ -8,10 +8,10 @@ const ITEMS = [
   { type: 'img', src: '/trabajos/trabajo2.jpg', label: 'Limpieza de ventilador' },
   { type: 'img', src: '/trabajos/trabajo3.jpg', label: 'Limpieza de ventilador' },
   { type: 'img', src: '/trabajos/trabajo4.jpg', label: 'Placa madre Dell — diagnóstico' },
-  { type: 'img', src: '/trabajos/trabajo5.jpg', label: 'Reparación Dell Latitude' },
+  
   { type: 'img', src: '/trabajos/trabajo6.jpg', label: 'Placa PS4 — revisión' },
   { type: 'img', src: '/trabajos/trabajo7.jpg', label: 'CPU — extracción' },
-  { type: 'img', src: '/trabajos/trabajo8.jpg', label: 'Dell SupportAssist — diagnóstico RAM' },
+  
   { type: 'img', src: '/trabajos/trabajo9.jpg', label: 'Cambio de pasta térmica' },
   { type: 'img', src: '/trabajos/trabajo10.jpg', label: 'Conector de fan — reparación' },
   { type: 'img', src: '/trabajos/trabajo11.jpg', label: 'Reconexión de cables' },
