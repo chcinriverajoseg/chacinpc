@@ -1,0 +1,76 @@
+diff --git a/index.html b/index.html
+index 2f2d78c..4fefe9f 100644
+--- a/index.html
++++ b/index.html
+@@ -1,5 +1,5 @@
+ <!doctype html>
+-<html lang="en">
++<html lang="es-CL">
+   <head>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1T5HNEK7TP"></script>
+     <script>
+@@ -11,13 +11,57 @@
+     <meta charset="UTF-8" />
+     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>chacinpc</title>
+-    <meta name="keywords" content="reparación PC Valparaíso, técnico computadores Concón, servicio técnico laptop Chile, página web barata Chile, desarrollador web Valparaíso">
+-<meta property="og:title" content="ChacinPC — Reparación PC y Desarrollo Web" />
+-<meta property="og:description" content="Técnico en computadores y desarrollador fullstack en Valparaíso — Concón. Reparación, mantención y páginas web profesionales." />
+-<meta property="og:image" content="https://chacinpc.netlify/logo.jpg" />
+-<meta property="og:url" content="https://chacinpc.netlify.app" />
+-<meta name="google-site-verification" content="" />
++    <link rel="canonical" href="https://chacinpc.netlify.app/" />
++
++    <title>ChacinPC — Reparación de PC y Desarrollo Web en Valparaíso y Concón</title>
++    <meta name="description" content="Técnico en computadores y desarrollador fullstack en Valparaíso — Concón. Reparación y mantención de PC desde $15.000, y páginas web profesionales desde $120.000. Diagnóstico claro, atención directa." />
++    <meta name="keywords" content="reparación PC Valparaíso, técnico computadores Concón, servicio técnico laptop Chile, página web barata Chile, desarrollador web Valparaíso" />
++    <meta name="robots" content="index, follow" />
++    <meta name="author" content="José Chacín — ChacinPC" />
++
++    <!-- Open Graph / Facebook / WhatsApp / Instagram link previews -->
++    <meta property="og:type" content="website" />
++    <meta property="og:locale" content="es_CL" />
++    <meta property="og:site_name" content="ChacinPC" />
++    <meta property="og:title" content="ChacinPC — Reparación PC y Desarrollo Web" />
++    <meta property="og:description" content="Técnico en computadores y desarrollador fullstack en Valparaíso — Concón. Reparación, mantención y páginas web profesionales." />
++    <meta property="og:image" content="https://chacinpc.netlify.app/logo.jpg" />
++    <meta property="og:image:width" content="1254" />
++    <meta property="og:image:height" content="1254" />
++    <meta property="og:url" content="https://chacinpc.netlify.app/" />
++
++    <!-- Twitter/X card -->
++    <meta name="twitter:card" content="summary_large_image" />
++    <meta name="twitter:title" content="ChacinPC — Reparación PC y Desarrollo Web" />
++    <meta name="twitter:description" content="Técnico en computadores y desarrollador fullstack en Valparaíso — Concón. Reparación, mantención y páginas web profesionales." />
++    <meta name="twitter:image" content="https://chacinpc.netlify.app/logo.jpg" />
++
++    <!-- Local business structured data (helps Google understand who/where/what) -->
++    <script type="application/ld+json">
++    {
++      "@context": "https://schema.org",
++      "@type": "LocalBusiness",
++      "name": "ChacinPC",
++      "image": "https://chacinpc.netlify.app/logo.jpg",
++      "url": "https://chacinpc.netlify.app/",
++      "telephone": "+56944019952",
++      "priceRange": "$15.000 - $500.000",
++      "address": {
++        "@type": "PostalAddress",
++        "addressLocality": "Concón",
++        "addressRegion": "Valparaíso",
++        "addressCountry": "CL"
++      },
++      "areaServed": ["Concón", "Valparaíso", "Viña del Mar"],
++      "sameAs": [
++        "https://instagram.com/chacinpc",
++        "https://www.facebook.com/share/18mCXmw3rr/",
++        "https://github.com/chcinriverajoseg",
++        "https://www.linkedin.com/in/jose-chacin-946a4330b"
++      ],
++      "description": "Técnico en computadores y desarrollador fullstack en Valparaíso — Concón. Reparación y mantención de PC, y desarrollo de páginas web profesionales."
++    }
++    </script>
+   </head>
+   <body>
+     <div id="root"></div>
